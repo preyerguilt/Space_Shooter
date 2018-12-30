@@ -50,7 +50,7 @@ namespace SpaceShooterRevamped.Sprites
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, Position,null, Color.White,_rotation,Origin, 1,SpriteEffects.None,0f);
+            spriteBatch.Draw(_texture, Position,Rectangle, Color.White,_rotation,Origin, 1,SpriteEffects.None,0f);
         }
 
         public object Clone()
