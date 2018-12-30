@@ -57,5 +57,14 @@ namespace SpaceShooterRevamped.Sprites
         {
             return this.MemberwiseClone();
         }
+
+        #region Coliision
+
+        protected bool IsTouchingLeft(Sprite sprite)
+        {
+            return this.Rectangle.Right + this.LinearVelocity
+        }
+
+        #endregion
     }
 }

@@ -14,8 +14,9 @@ namespace SpaceShooterRevamped.Sprites
         public Rock(Texture2D texture)
             :base(texture)
         {
-            Position = new Vector2(Game1.Random.Next(0, Game1.ScreenWidth), 
+            Position = new Vector2(Game1.Random.Next(0, Game1.ScreenWidth-_texture.Width), 
                                    Game1.Random.Next(0, Game1.ScreenHeight));
+            LinearVelocity = Game1.Random.Next(3, 6);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -25,7 +26,7 @@ namespace SpaceShooterRevamped.Sprites
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-            base.Update(gameTime, sprites);
+            
         }
     }
 }
