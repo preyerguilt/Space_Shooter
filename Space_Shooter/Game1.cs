@@ -67,7 +67,7 @@ namespace SpaceShooterRevamped
                 },
                 new Rock(rockTexture)
                 {
-                    Position(300,300)
+                    Position = new Vector2(300,300)
                 }
             };
 
