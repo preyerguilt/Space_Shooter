@@ -14,8 +14,8 @@ namespace SpaceShooterRevamped.Sprites
         public Rock(Texture2D texture)
             :base(texture)
         {
-            Position = new Vector2(Game1.Random.Next(0, Game1.ScreenWidth-_texture.Width), 
-                                   Game1.Random.Next(0, Game1.ScreenHeight));
+            //Position = new Vector2(Game1.Random.Next(0, Game1.ScreenWidth-_texture.Width), 
+            //                       Game1.Random.Next(0, Game1.ScreenHeight));
             LinearVelocity = Game1.Random.Next(3, 6);
         }
 

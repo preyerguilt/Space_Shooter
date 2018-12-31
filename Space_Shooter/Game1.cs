@@ -56,7 +56,7 @@ namespace SpaceShooterRevamped
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             var shipTexture = Content.Load<Texture2D>("SpaceShipt");
-            var bulletTexture = Content.Load<Texture2D>("SpaceShipt");
+            var rockTexture = Content.Load<Texture2D>("rock");
 
             _sprites = new List<Sprite>
             {
@@ -64,6 +64,10 @@ namespace SpaceShooterRevamped
                 {
                     Position = new Vector2(100,100),
                     Bullet = new Bullet(Content.Load<Texture2D>("Bob"))
+                },
+                new Rock(rockTexture)
+                {
+                    Position(300,300)
                 }
             };
 

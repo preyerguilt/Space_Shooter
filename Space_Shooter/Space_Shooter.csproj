@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Bob.png" />
+    <Content Include="Content\rock.png" />
     <Content Include="Content\SpaceShipt.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
