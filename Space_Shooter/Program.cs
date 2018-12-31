@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Space_Shooter
+namespace SpaceShooterRevamped
 {
 #if WINDOWS || LINUX
     /// <summary>

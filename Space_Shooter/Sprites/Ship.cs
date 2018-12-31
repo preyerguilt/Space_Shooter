@@ -57,6 +57,7 @@ namespace SpaceShooterRevamped.Sprites
 
         }
 
+
         private void PositionCheck()
         {
             //X-Axis

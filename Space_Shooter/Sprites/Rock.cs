@@ -31,6 +31,7 @@ namespace SpaceShooterRevamped.Sprites
                 if (sprite == this) continue;
                 if (sprite.Rectangle.Intersects(this.Rectangle) && sprite.IsLethal)
                 {
+                    Console.WriteLine("Removed rock");
                     this.IsRemoved = true;
                 }
             }
