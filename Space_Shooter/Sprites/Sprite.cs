@@ -27,7 +27,7 @@ namespace SpaceShooterRevamped.Sprites
 
         public float LifeSpan = 0f;
 
-        public bool IsLethal = false;
+        //public bool IsLethal = false;
         public bool IsRemoved = false;
         
         public Rectangle Rectangle //For basic collision detection

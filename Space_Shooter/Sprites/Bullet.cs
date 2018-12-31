@@ -15,7 +15,7 @@ namespace SpaceShooterRevamped.Sprites
         public Bullet(Texture2D texture)
             : base(texture)
         {
-            IsLethal = true;
+            //IsLethal = true;
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)

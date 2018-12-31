@@ -20,12 +20,14 @@ namespace SpaceShooterRevamped.Sprites
         public Ship(Texture2D texture)
             : base(texture)
         {
-            input = new Input();
-            input.Up = Keys.W;
-            input.Down = Keys.S;
-            input.Left = Keys.A;
-            input.Right = Keys.D;
-            input.Shoot = Keys.Space;
+            input = new Input
+            {
+                Up = Keys.W,
+                Down = Keys.S,
+                Left = Keys.A,
+                Right = Keys.D,
+                Shoot = Keys.Space
+            };
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
