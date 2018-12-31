@@ -26,7 +26,14 @@ namespace SpaceShooterRevamped.Sprites
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-            
+            foreach(var sprite in sprites)
+            {
+                if (sprite == this) continue;
+                if (sprite.Rectangle.Intersects(this.Rectangle) && sprite.IsLethal)
+                {
+                    this.IsRemoved = true;
+                }
+            }
         }
     }
 }
