@@ -67,10 +67,7 @@ namespace SpaceShooterRevamped
                     Position = new Vector2(100,100),
                     Bullet = new Bullet(Content.Load<Texture2D>("Bob"))
                 },
-                new Rock(rockTexture) 
-                {
-                    Position = new Vector2(200,200)
-                }
+                new Rock(rockTexture)
             };
 
         }

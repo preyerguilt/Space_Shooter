@@ -1,0 +1,4 @@
+Note To Self:
+- Do not override the draw methods for subclasses of sprite, otherwise they will not draw (obviously)
+- Make sure everything is in the samenamespace (Don't change gametitles mid-development ffs)
+s
