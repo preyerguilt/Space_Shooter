@@ -2,7 +2,7 @@
 
 namespace SpaceShooterRevamped
 {
-#if WINDOWS || LINUX
+
     /// <summary>
     /// The main class.
     /// </summary>
@@ -18,5 +18,5 @@ namespace SpaceShooterRevamped
                 game.Run();
         }
     }
-#endif
+
 }

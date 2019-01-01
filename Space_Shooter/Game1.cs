@@ -100,14 +100,14 @@ namespace SpaceShooterRevamped
 
         private void PostUpdate()
         {
-            //for (int i = 0; i < _sprites.Count; i++)
-            //{
-            //    if (_sprites[i].IsRemoved)
-            //    {
-            //        _sprites.RemoveAt(i);
-            //        i--;
-            //    }
-            //}
+            for (int i = 0; i < _sprites.Count; i++)
+            {
+                if (_sprites[i].IsRemoved)
+                {
+                    _sprites.RemoveAt(i);
+                    i--;
+                }
+            }
         }
 
         /// <summary>
