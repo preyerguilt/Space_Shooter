@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using SpaceShooterRevamped.Sprites;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace SpaceShooterRevamped
 {
@@ -12,6 +13,8 @@ namespace SpaceShooterRevamped
     /// </summary>
     public class Game1 : Game 
     {
+
+        
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -19,13 +22,16 @@ namespace SpaceShooterRevamped
         public static int ScreenWidth;
         public static int ScreenHeight;
 
+        private float _delay = 1;
+        private float _elapsed;
+        private static Texture2D rockTexture;
         private List<Sprite> _sprites;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
+            _elapsed = _delay;
             Random = new Random();
 
             ScreenWidth = 1280;
@@ -58,7 +64,7 @@ namespace SpaceShooterRevamped
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             var shipTexture = Content.Load<Texture2D>("SpaceShipt");
-            var rockTexture = Content.Load<Texture2D>("rock");
+            rockTexture = Content.Load<Texture2D>("rock");
 
             _sprites = new List<Sprite>
             {
@@ -88,6 +94,13 @@ namespace SpaceShooterRevamped
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            _elapsed -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if(_elapsed <= 0f){
+                Debug.WriteLine("Spawning");
+                _sprites.Add(new Rock(rockTexture));
+                _elapsed = _delay;
+            }
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 

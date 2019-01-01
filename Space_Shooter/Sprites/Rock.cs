@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Diagnostics;
 
 namespace SpaceShooterRevamped.Sprites
 {
@@ -15,12 +16,13 @@ namespace SpaceShooterRevamped.Sprites
             :base(texture)
         {
             random = new Random();
-            LinearVelocity = Game1.Random.Next(3, 6);
+            LinearVelocity = Game1.Random.Next(1, 2);
             Position = SpawnPosition();
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
+            _rotation += 0.01f;
             Position += Direction * LinearVelocity;
             foreach(var sprite in sprites)
             {
@@ -36,6 +38,9 @@ namespace SpaceShooterRevamped.Sprites
 
             if(Position.Y < 0 && Position.Y > Game1.ScreenHeight+1)
                 IsRemoved = true;
+
+            if(_rotation >= 6.5f)
+                _rotation = 0f;
         }
 
         

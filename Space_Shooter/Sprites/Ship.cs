@@ -89,7 +89,7 @@ namespace SpaceShooterRevamped.Sprites
             var bullet = Bullet.Clone() as Bullet;//Clones an instance of the bullet class
             bullet.Direction = this.Direction; //Set all parameters the same except the linearvelocity (bullets gotta go fast yo!)
             bullet.Position = this.Position;
-            bullet.LinearVelocity = this.LinearVelocity *40;
+            bullet.LinearVelocity = this.LinearVelocity *80;
             bullet.LifeSpan = 2f;
             bullet.Parent = this;
 
