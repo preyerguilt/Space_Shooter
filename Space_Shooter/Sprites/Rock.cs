@@ -17,12 +17,7 @@ namespace SpaceShooterRevamped.Sprites
             //Position = new Vector2(Game1.Random.Next(0, Game1.ScreenWidth-_texture.Width), 
             //                       Game1.Random.Next(0, Game1.ScreenHeight));
             LinearVelocity = Game1.Random.Next(3, 6);
-            Console.WriteLine("Rock");
-        }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            
+           
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
@@ -32,8 +27,8 @@ namespace SpaceShooterRevamped.Sprites
                 if (sprite == this) continue;
                 if (sprite.Rectangle.Intersects(this.Rectangle) && sprite.Parent is Ship)
                 {
-                    Console.WriteLine("Removed rock");
                     this.IsRemoved = true;
+                    sprite.IsRemoved = true;
                 }
             }
         }
