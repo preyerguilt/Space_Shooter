@@ -28,6 +28,7 @@ namespace SpaceShooterRevamped.Sprites
                 Right = Keys.D,
                 Shoot = Keys.Space
             };
+            
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
@@ -39,7 +40,7 @@ namespace SpaceShooterRevamped.Sprites
                 _rotation -= MathHelper.ToRadians(RotationVelocity);
             else if (_currentKey.IsKeyDown(input.Right))
                 _rotation += MathHelper.ToRadians(RotationVelocity);
-            Console.WriteLine("Rotaion: " + _rotation);
+            
             Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
 
             if (_currentKey.IsKeyDown(input.Up))
@@ -88,7 +89,7 @@ namespace SpaceShooterRevamped.Sprites
             var bullet = Bullet.Clone() as Bullet;//Clones an instance of the bullet class
             bullet.Direction = this.Direction; //Set all parameters the same except the linearvelocity (bullets gotta go fast yo!)
             bullet.Position = this.Position;
-            bullet.LinearVelocity = this.LinearVelocity ;
+            bullet.LinearVelocity = this.LinearVelocity *40;
             bullet.LifeSpan = 2f;
             bullet.Parent = this;
 

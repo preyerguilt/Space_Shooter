@@ -40,11 +40,12 @@ namespace SpaceShooterRevamped
         /// </summary>
         protected override void Initialize()
         {
+            base.Initialize();
             // TODO: Add your initialization logic here
             graphics.PreferredBackBufferWidth = ScreenWidth;
             graphics.PreferredBackBufferHeight = ScreenHeight;
             graphics.ApplyChanges();
-            base.Initialize();
+            
         }
 
         /// <summary>
@@ -53,6 +54,7 @@ namespace SpaceShooterRevamped
         /// </summary>
         protected override void LoadContent()
         {
+            Console.WriteLine("Loading");
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             var shipTexture = Content.Load<Texture2D>("SpaceShipt");
@@ -67,7 +69,7 @@ namespace SpaceShooterRevamped
                 },
                 new Rock(rockTexture)
                 {
-                    Position = new Vector2(300,300)
+                    Position = new Vector2(200,200)
                 }
             };
 

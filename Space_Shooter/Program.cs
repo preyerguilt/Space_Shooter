@@ -2,12 +2,13 @@
 
 namespace SpaceShooterRevamped
 {
-
+    #if WINDOWS || LINUX
     /// <summary>
     /// The main class.
     /// </summary>
     public static class Program
     {
+    
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,5 +19,5 @@ namespace SpaceShooterRevamped
                 game.Run();
         }
     }
-
+    #endif
 }

@@ -12,7 +12,7 @@ namespace SpaceShooterRevamped.Sprites
     public class Sprite : ICloneable
     {
         protected Texture2D _texture;
-        protected float _rotation; //Decided via Move method
+        protected float _rotation; 
         protected KeyboardState _currentKey;
         protected KeyboardState _previousKey;
 
@@ -27,7 +27,7 @@ namespace SpaceShooterRevamped.Sprites
 
         public float LifeSpan = 0f;
 
-        //public bool IsLethal = false;
+        
         public bool IsRemoved = false;
         
         public Rectangle Rectangle //For basic collision detection
@@ -42,6 +42,7 @@ namespace SpaceShooterRevamped.Sprites
         {
             _texture = texture;
             Origin = new Vector2(_texture.Width / 2, _texture.Height / 2);
+            Console.Write(Rectangle.Width + " RectangleWidth for ");
         }
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites)
@@ -51,7 +52,7 @@ namespace SpaceShooterRevamped.Sprites
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, Position,Rectangle, Color.White,_rotation,Origin, 1,SpriteEffects.None,0f);
+            spriteBatch.Draw(_texture, Position,null, Color.White,_rotation,Origin, 1,SpriteEffects.None,0f);
         }
 
         public object Clone()
